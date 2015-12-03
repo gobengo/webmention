@@ -3,6 +3,8 @@
 var fetch = require('node-fetch')
 var parseLinkHeader = require('parse-links')
 
+exports.discover = discover
+
 if (require.main === module) {
   discover(process.argv[2])
   .then((endpoints) => {

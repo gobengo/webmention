@@ -7,14 +7,17 @@
     "webmention-discovery": "./discovery.js"
   },
   "scripts": {
+    "start": "node ./http.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.3",
     "htmlparser2": "^3.9.0",
     "node-fetch": "^1.3.3",
     "parse-links": "git://github.com/gobengo/parse-links.git#8246c346cd5c5bc9fc142535a5c57943e079684a",
+    "portfinder": "^0.4.0",
     "trumpet": "^1.7.2"
   }
 }
