@@ -3,6 +3,9 @@ const express = require('express')
 const discovery = require('./discovery')
 
 if (require.main === module) {
+  process.on('SIGINT', function() {
+    process.stderr.write('Exiting\n', process.exit.bind(process, 0))
+  })
   Promise.resolve(process.env.PORT || findPort())
   .then(function (port) {
     createServer().listen(port)
