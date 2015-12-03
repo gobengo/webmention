@@ -1,0 +1,17 @@
+{
+  "name": "webmention",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "htmlparser2": "^3.9.0",
+    "node-fetch": "^1.3.3",
+    "parse-links": "^0.1.0",
+    "trumpet": "^1.7.2"
+  }
+}
