@@ -10,6 +10,7 @@ Intended to be spec-compliant. Please file issues if you spot a deviation.
 
 ## Usage
 
+```
 ⚡ webmention-discovery http://bengo.is
 https://webmention.io/bengo.is/webmention
 
@@ -18,6 +19,7 @@ http://aaronparecki.com/webmention
 
 ⚡ webmention-discovery http://tantek.com
 http://webmention.io/tantek.com/webmention
+```
 
 ## TODO
 
