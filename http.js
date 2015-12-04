@@ -5,6 +5,11 @@ const discovery = require('./discovery')
 if (require.main === module) {
   process.on('SIGINT', exit)
   process.on('SIGTERM', exit)
+  process.on('uncaughtException', (err) => {
+    console.error('uncaughtException: ', err)
+    console.error(err.stack)
+    process.exit(1)
+  })
   return Promise.resolve(process.env.PORT || findPort())
   .then(function (port) {
     createServer().listen(port)
