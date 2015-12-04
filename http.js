@@ -45,14 +45,14 @@ function createServer() {
       console.log('need target')
       return res.status(400).json({
         message: "Provide a target URL, e.g. ?target=http://bengo.is/"
-      })
+      }).end()
     }
     discovery.discover(target)
     .then((endpoints) => {
       console.log('endpoints are', endpoints)
       res.status(200).json({
         webmention: endpoints
-      })
+      }).end()
     })
     .catch((err) => {
       console.log('error!', err)
@@ -60,7 +60,7 @@ function createServer() {
       res.status(500).json({
         status: status,
         message: err.message
-      });
+      }).end();
     })
   })
   return server
