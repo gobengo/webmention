@@ -31,7 +31,7 @@ function discover(targetURI) {
 }
 
 function discoverFromHEAD(url) {
-  return fetch(url, { method: 'HEAD '})
+  return fetch(url, { method: 'HEAD' })
   .then(endpointsFromLinkHeaders)
 }
 
