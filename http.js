@@ -50,7 +50,7 @@ function createServer() {
     discovery.discover(target)
     .then((endpoints) => {
       console.log('endpoints are', endpoints)
-      res.json({
+      res.status(200).json({
         webmention: endpoints
       })
     })
