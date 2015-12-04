@@ -10,6 +10,15 @@ Intended to be spec-compliant. Please file issues if you spot a deviation.
 
 ## Usage
 
+### Server
+
+```
+⚡ PORT=8080 npm start
+Listening on port 8080
+```
+
+### CLI
+
 ```
 ⚡ webmention-discovery http://bengo.is
 https://webmention.io/bengo.is/webmention
