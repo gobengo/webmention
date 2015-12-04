@@ -31,7 +31,7 @@ function discover(targetURI) {
 }
 
 function discoverFromHEAD(url) {
-  return fetch(url, { method: 'HEAD'})
+  return fetch(url, { method: 'HEAD '})
   .then(endpointsFromLinkHeaders)
 }
 
@@ -73,6 +73,10 @@ function endpointsFromLinkHeaders(res) {
 const WEBMENTION_LINK_QUERYSELECTOR =
   'head link[rel="webmention"], a[rel="webmention"]'
 function endpointsFromBodyStream(htmlStream) {
+  htmlStream.on('error', function (err) {
+    console.error("DEBUG: htmlStream error!", err);
+    console.error(err.stack);
+  })
   var trumpet = require('trumpet');
   var tr = trumpet()
   var endpoint;
