@@ -56,6 +56,7 @@ function createServer() {
     })
     .catch((err) => {
       console.log('error!', err)
+      console.log(err.stack)
       const status = 500
       res.status(500).json({
         status: status,
